@@ -1,21 +1,24 @@
 # Nico Paulis · Filmmaker
 
-Portafolio audiovisual responsive de Nico Paulis. Esta entrega integra HTML semántico, CSS Grid y Flexbox, Bootstrap y componentes interactivos.
+Portafolio audiovisual con Bootstrap y estilos propios organizados en módulos SCSS.
 
 ## Estructura
 
 - `index.html`: portada y galería con carousel.
 - `pages/`: páginas de Sobre mí, Proyectos, Servicios y Contacto.
-- `styles/styles.css`: estilos personalizados y ajustes responsivos.
+- `scss/main.scss`: único punto de entrada de Sass.
+- `scss/utilities/`: variables de diseño y mixins reutilizables.
+- `scss/base/`: estilos globales y tipografía.
+- `scss/layout/`: encabezado, navegación, secciones, pie y breakpoints.
+- `scss/components/`: botones, tarjetas y galería.
+- `styles/styles.css`: hoja compilada que enlazan las cinco páginas.
 - `assets/`: imagen del portafolio.
 
-La navbar responsiva de Bootstrap está incluida en las cinco páginas. El carousel se usa en Inicio y Proyectos.
+## Compilar estilos
 
-## Sitio publicado
+Instalá las dependencias con `pnpm install` y ejecutá `pnpm build:css` para compilar `scss/main.scss` en `styles/styles.css`. Para recompilar al guardar cambios, ejecutá `pnpm watch:css`.
 
-[Abrir el portafolio en GitHub Pages](https://nicopaulis.github.io/nico-paulis-filmmaker-github/)
-
-GitHub Pages publica desde la rama `main`, en la carpeta raíz del repositorio.
+Bootstrap y Google Fonts se cargan desde sus CDN. La navbar Bootstrap sigue presente en las cinco páginas; el carousel aparece en Inicio y Proyectos.
 
 ## Abrir localmente
 
